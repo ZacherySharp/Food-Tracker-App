@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriTrack — Calorie & Macro Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .hero-gradient { background: linear-gradient(160deg, #f0fdf4 0%, #dcfce7 40%, #f0fdf4 100%); }
+    .card-shadow { box-shadow: 0 4px 24px rgba(0,0,0,0.07); }
+    .float-badge { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- ─── NAVBAR ─────────────────────────────────────────────────────────── -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+              d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L19 8l-8 8z"/>
+          </svg>
+        </div>
+        <span class="font-bold text-lg tracking-tight text-gray-900">NutriTrack</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#features" class="text-sm text-gray-500 hover:text-gray-900 transition-colors">Features</a>
+        <a href="#how-it-works" class="text-sm text-gray-500 hover:text-gray-900 transition-colors">How it works</a>
+        <a href="#" class="text-sm text-gray-500 hover:text-gray-900 transition-colors">Pricing</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="onboarding.html" class="text-sm text-gray-600 hover:text-gray-900 font-medium">Sign in</a>
+        <a href="onboarding.html"
+          class="px-4 py-2 bg-green-600 text-white text-sm font-semibold rounded-lg hover:bg-green-700 transition-colors">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ───────────────────────────────────────────────────────────── -->
+  <section class="pt-16 hero-gradient">
+    <div class="max-w-7xl mx-auto px-6 py-28 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: Copy -->
+      <div>
+        <div class="inline-flex items-center gap-2 bg-green-50 border border-green-200 text-green-700
+            text-xs font-semibold px-3 py-1.5 rounded-full mb-6 uppercase tracking-wide">
+          <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+          Science-backed nutrition planning
+        </div>
+
+        <h1 class="font-display text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-6">
+          Track Calories,<br />
+          <span class="text-green-600">Hit Your</span><br />
+          Health Goals
+        </h1>
+
+        <p class="text-lg text-gray-500 leading-relaxed mb-8 max-w-lg">
+          Get personalized calorie and macro targets calculated from your body stats.
+          Log meals, track hydration, and build lasting habits — all in one place.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="onboarding.html"
+            class="px-6 py-3.5 bg-green-600 text-white font-semibold rounded-xl shadow-lg shadow-green-200
+              hover:bg-green-700 transition-all hover:-translate-y-0.5">
+            Start for Free &rarr;
+          </a>
+          <a href="dashboard.html"
+            class="px-6 py-3.5 bg-white text-gray-700 font-semibold rounded-xl border border-gray-200
+              hover:border-gray-300 transition-colors">
+            View Demo
+          </a>
+        </div>
+
+        <!-- Social proof -->
+        <div class="mt-10 flex items-center gap-4">
+          <div class="flex -space-x-2.5">
+            <div class="w-9 h-9 rounded-full bg-blue-400 border-2 border-white flex items-center justify-center text-white text-xs font-bold">JD</div>
+            <div class="w-9 h-9 rounded-full bg-violet-400 border-2 border-white flex items-center justify-center text-white text-xs font-bold">SM</div>
+            <div class="w-9 h-9 rounded-full bg-orange-400 border-2 border-white flex items-center justify-center text-white text-xs font-bold">AL</div>
+            <div class="w-9 h-9 rounded-full bg-pink-400 border-2 border-white flex items-center justify-center text-white text-xs font-bold">KR</div>
+            <div class="w-9 h-9 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-gray-500 text-xs font-bold">+</div>
+          </div>
+          <div>
+            <div class="flex text-amber-400 text-sm leading-none mb-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="text-sm text-gray-500">Loved by <strong class="text-gray-800">10,000+</strong> users</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: App preview card -->
+      <div class="relative flex justify-center">
+        <div class="bg-white rounded-3xl card-shadow border border-gray-100 p-6 w-full max-w-sm">
+
+          <!-- Card header -->
+          <div class="flex items-center justify-between mb-5">
+            <div>
+              <p class="text-xs text-gray-400 font-medium">Today's Progress</p>
+              <p class="font-semibold text-gray-800 text-sm">Sunday, June 22</p>
+            </div>
+            <div class="w-9 h-9 bg-orange-50 rounded-xl flex items-center justify-center text-lg">🔥</div>
+          </div>
+
+          <!-- Calorie ring -->
+          <div class="flex items-center justify-center py-2">
+            <div class="relative">
+              <svg width="160" height="160" viewBox="0 0 160 160">
+                <circle cx="80" cy="80" r="68" fill="none" stroke="#f3f4f6" stroke-width="12"/>
+                <!-- 71% filled: dashoffset = 427.26 * 0.29 = 123.9 -->
+                <circle cx="80" cy="80" r="68" fill="none" stroke="#16a34a" stroke-width="12"
+                  stroke-dasharray="427.26" stroke-dashoffset="123.9" stroke-linecap="round"
+                  transform="rotate(-90 80 80)"/>
+              </svg>
+              <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <p class="text-2xl font-bold text-gray-900">1,420</p>
+                <p class="text-xs text-gray-400">of 2,000 kcal</p>
+                <p class="text-xs text-green-600 font-medium mt-0.5">580 left</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Macro chips -->
+          <div class="grid grid-cols-3 gap-2 mt-3">
+            <div class="bg-blue-50 rounded-xl p-2.5 text-center">
+              <p class="text-xs text-blue-600 font-semibold">Protein</p>
+              <p class="font-bold text-gray-800 text-sm mt-0.5">98<span class="text-xs font-normal text-gray-400">g</span></p>
+            </div>
+            <div class="bg-purple-50 rounded-xl p-2.5 text-center">
+              <p class="text-xs text-purple-600 font-semibold">Carbs</p>
+              <p class="font-bold text-gray-800 text-sm mt-0.5">145<span class="text-xs font-normal text-gray-400">g</span></p>
+            </div>
+            <div class="bg-pink-50 rounded-xl p-2.5 text-center">
+              <p class="text-xs text-pink-600 font-semibold">Fat</p>
+              <p class="font-bold text-gray-800 text-sm mt-0.5">42<span class="text-xs font-normal text-gray-400">g</span></p>
+            </div>
+          </div>
+
+          <!-- Water bar -->
+          <div class="mt-4">
+            <div class="flex justify-between text-xs text-gray-500 mb-1.5">
+              <span>💧 Water</span>
+              <span>1.5L / 2.9L</span>
+            </div>
+            <div class="h-2.5 bg-gray-100 rounded-full overflow-hidden">
+              <div class="h-2.5 bg-cyan-400 rounded-full" style="width: 52%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating badges -->
+        <div class="absolute -top-4 -right-2 float-badge bg-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-full">
+          🔥 7-day streak
+        </div>
+        <div class="absolute -bottom-4 -left-2 float-badge bg-white border border-gray-200 text-xs font-semibold px-3 py-2 rounded-full text-gray-700">
+          ✓ Goal: Maintenance
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STATS BAR ───────────────────────────────────────────────────────── -->
+  <section class="bg-green-600 py-10">
+    <div class="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-center">
+      <div>
+        <p class="text-3xl font-bold font-display">10K+</p>
+        <p class="text-green-100 text-sm mt-1">Active Users</p>
+      </div>
+      <div>
+        <p class="text-3xl font-bold font-display">2.4M</p>
+        <p class="text-green-100 text-sm mt-1">Meals Logged</p>
+      </div>
+      <div>
+        <p class="text-3xl font-bold font-display">95%</p>
+        <p class="text-green-100 text-sm mt-1">Goal Achievement Rate</p>
+      </div>
+      <div>
+        <p class="text-3xl font-bold font-display">4.9 &#9733;</p>
+        <p class="text-green-100 text-sm mt-1">Average Rating</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FEATURES ────────────────────────────────────────────────────────── -->
+  <section id="features" class="py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 max-w-2xl mx-auto">
+        <h2 class="font-display text-4xl font-bold text-gray-900 mb-4">
+          Everything you need to reach your goals
+        </h2>
+        <p class="text-gray-500 text-lg">
+          Science-backed calculations meet intuitive design. Built for real life, not just gym rats.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-green-50 rounded-2xl p-8 border border-green-100">
+          <div class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Smart Calorie Targets</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Personalized calorie goals using the Mifflin-St Jeor formula — factoring your BMR,
+            activity level, and whether you want to lose, maintain, or gain.
+          </p>
+        </div>
+
+        <div class="bg-blue-50 rounded-2xl p-8 border border-blue-100">
+          <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Macro Breakdown</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Track protein, carbs, and fat with per-meal precision. See how each meal fits your
+            daily targets and adjust on the fly.
+          </p>
+        </div>
+
+        <div class="bg-cyan-50 rounded-2xl p-8 border border-cyan-100">
+          <div class="w-12 h-12 bg-cyan-600 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Hydration Tracking</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Daily water targets calculated from your weight and activity level. Stay hydrated,
+            stay sharp — your goal updates as your profile does.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS ────────────────────────────────────────────────────── -->
+  <section id="how-it-works" class="py-28 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-display text-4xl font-bold text-gray-900 mb-4">Get started in under 3 minutes</h2>
+        <p class="text-gray-500 text-lg">Simple setup. Powerful, lasting results.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <!-- Connector line -->
+        <div class="hidden md:block absolute top-10 left-[calc(16.66%+2rem)] right-[calc(16.66%+2rem)] h-px bg-green-200"></div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-white border-2 border-green-200 rounded-2xl flex items-center
+              justify-center text-3xl font-bold text-green-600 mx-auto mb-5 shadow-sm font-display">
+            1
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Create Your Profile</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Enter your height, weight, age, and sex. We calculate your base metabolic rate (BMR)
+            and total daily energy expenditure (TDEE) instantly.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-white border-2 border-green-200 rounded-2xl flex items-center
+              justify-center text-3xl font-bold text-green-600 mx-auto mb-5 shadow-sm font-display">
+            2
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Set Your Goal</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Tell us your activity level and whether you want to lose weight, maintain,
+            or build muscle. We'll set your exact calorie and macro targets.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-white border-2 border-green-200 rounded-2xl flex items-center
+              justify-center text-3xl font-bold text-green-600 mx-auto mb-5 shadow-sm font-display">
+            3
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Track Daily</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Log meals, monitor macros, and hit your water target. Watch your streak grow
+            and your progress compound over time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA BANNER ──────────────────────────────────────────────────────── -->
+  <section class="py-28 bg-green-600">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="font-display text-4xl font-bold text-white mb-4">
+        Ready to transform your nutrition?
+      </h2>
+      <p class="text-green-100 text-lg mb-10 leading-relaxed">
+        Join thousands of people who've hit their health goals with NutriTrack.
+        Free to start. No credit card required.
+      </p>
+      <a href="onboarding.html"
+        class="inline-block px-8 py-4 bg-white text-green-700 font-bold text-lg rounded-xl
+          hover:bg-green-50 transition-colors shadow-xl">
+        Get Started Free &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ───────────────────────────────────────────────────────────── -->
+  <footer class="bg-gray-900 text-gray-400 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L19 8l-8 8z"/>
+              </svg>
+            </div>
+            <span class="font-bold text-lg text-white">NutriTrack</span>
+          </div>
+          <p class="text-sm leading-relaxed max-w-xs">
+            Your science-backed companion for calories, macros, and hydration.
+            Personalized for your body. Built for your goals.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-sm">Product</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+            <li><a href="#how-it-works" class="hover:text-white transition-colors">How it works</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
+            <li><a href="dashboard.html" class="hover:text-white transition-colors">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-sm">Company</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Privacy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center
+          justify-between gap-3 text-xs text-gray-500">
+        <p>&copy; 2026 NutriTrack. All rights reserved.</p>
+        <p>Built with care for your health journey.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

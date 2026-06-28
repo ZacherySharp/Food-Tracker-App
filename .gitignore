@@ -1,0 +1,12 @@
+# Expo / React Native
+expo-app/node_modules/
+expo-app/.expo/
+expo-app/dist/
+expo-app/web-build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude
+.claude/

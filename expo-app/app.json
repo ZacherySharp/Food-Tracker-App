@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "NutriTrack",
+    "slug": "nutritrack",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#16a34a"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#16a34a"
+      },
+      "package": "com.nutritrack.app"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nutritrack.app"
+    },
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "plugins": [
+      "expo-asset"
+    ]
+  }
+}
